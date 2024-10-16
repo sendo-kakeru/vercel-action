@@ -15,8 +15,8 @@ jobs:
           fetch-depth: 0
           # set-safe-directory: src/app/fuga/
           sparse-checkout: |
+            !src/app/fuga/*
             /*
-            !src/app/fuga/
           sparse-checkout-cone-mode: false
       - name: List
         run: ls
@@ -28,6 +28,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod --no-cache"
           working-directory: ./
       # - name: Check
       #   run: ls src/app/fuga
