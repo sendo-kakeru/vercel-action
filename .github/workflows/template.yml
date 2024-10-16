@@ -20,6 +20,7 @@ jobs:
             /*
           sparse-checkout-cone-mode: false
       - name: Checkout
+        if: ${{ inputs.site == false }}
         uses: actions/checkout@v4
       - uses: amondnet/vercel-action@v25
         with:
