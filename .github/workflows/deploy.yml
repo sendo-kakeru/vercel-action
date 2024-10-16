@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Delete page.tsx
-        run: cat src/app/fuga/page.tsx && rm src/app/fuga/page.tsx && cat src/app/fuga/page.tsx
+        run: rm src/app/fuga/page.tsx
       - uses: amondnet/vercel-action@v25
         with:
           vercel-version: 33
@@ -20,3 +20,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
+      - name: Check
+        run: ls
