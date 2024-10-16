@@ -16,7 +16,10 @@ jobs:
           # set-safe-directory: src/app/fuga/
           sparse-checkout: |
             !src/app/fuga/*
+            /*
           sparse-checkout-cone-mode: false
+      - name: List
+        run: ls
       # - name: Delete page.tsx
       #   run: rm src/app/fuga/page.tsx
       - uses: amondnet/vercel-action@v25
