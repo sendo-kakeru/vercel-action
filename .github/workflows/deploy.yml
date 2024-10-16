@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      src/app/fuga/page.tsx
   workflow_dispatch:
 
 jobs:
@@ -11,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          sparse-checkout: |
-            !src/app/fuga/
-          sparse-checkout-cone-mode: true
-      - name: Delete page.tsx
-        run: rm src/app/fuga/page.tsx
+      #   with:
+      #     fetch-depth: 0
+      #     sparse-checkout: |
+      #       !src/app/fuga/
+      #     sparse-checkout-cone-mode: true
+      # - name: Delete page.tsx
+      #   run: rm src/app/fuga/page.tsx
       - uses: amondnet/vercel-action@v25
         with:
           vercel-version: 33
@@ -25,5 +27,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
-      - name: Check
-        run: ls src/app/fuga
+      # - name: Check
+      #   run: ls src/app/fuga
