@@ -11,12 +11,16 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        if: ${{ inputs.site == true }}
+        uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            ${{ inputs.site == true && '' || '!src/app/fuga/*' }}
-            ${{ inputs.site == true && '' || '/*' }}
-          sparse-checkout-cone-mode: ${{ inputs.site == true && false || true }}
+            !src/app/fuga/*
+            /*
+          sparse-checkout-cone-mode: false
+      - name: Checkout
+        uses: actions/checkout@v4
       - uses: amondnet/vercel-action@v25
         with:
           vercel-version: 33
@@ -24,3 +28,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: "--prod"
+          working-directory: ./
