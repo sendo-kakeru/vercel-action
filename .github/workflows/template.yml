@@ -10,16 +10,12 @@ jobs:
   deploy-template:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        if: ${{ inputs.site == true }}
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            !src/app/fuga/*
-            /*
-          sparse-checkout-cone-mode: false
-      - name: Checkout
-        uses: actions/checkout@v4
+            ${{ inputs.site == true && '' || '!src/app/fuga/*' }}
+            ${{ inputs.site == true && '' || '/*' }}
+          sparse-checkout-cone-mode: ${{ inputs.site == true && false || true }}
       - uses: amondnet/vercel-action@v25
         with:
           vercel-version: 33
