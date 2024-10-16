@@ -15,6 +15,7 @@ jobs:
           fetch-depth: 0
           # set-safe-directory: src/app/fuga/
           sparse-checkout: |
+            /*
             !src/app/fuga/
           sparse-checkout-cone-mode: false
       - name: List
