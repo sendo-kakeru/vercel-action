@@ -1,0 +1,30 @@
+on:
+  workflow_call:
+    inputs:
+      site:
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  deploy-template:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: ${{ inputs.site == true }}
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            !src/app/fuga/*
+            /*
+          sparse-checkout-cone-mode: false
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: amondnet/vercel-action@v25
+        with:
+          vercel-version: 33
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"
+          working-directory: ./

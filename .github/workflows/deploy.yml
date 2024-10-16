@@ -8,27 +8,6 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          # set-safe-directory: src/app/fuga/
-          sparse-checkout: |
-            !src/app/fuga/*
-            /*
-          sparse-checkout-cone-mode: false
-      - name: List
-        run: ls
-      # - name: Delete page.tsx
-      #   run: rm src/app/fuga/page.tsx
-      - uses: amondnet/vercel-action@v25
-        with:
-          vercel-version: 33
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod"
-          working-directory: ./
-      # - name: Check
-      #   run: ls src/app/fuga
+    uses: ./.github/workflows/deploy-to-vercel.yml
+    with:
+      site: true
