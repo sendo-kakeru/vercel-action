@@ -16,7 +16,7 @@ jobs:
           # set-safe-directory: src/app/fuga/
           sparse-checkout: |
             !src/app/fuga/*
-          sparse-checkout-cone-mode: false
+          # sparse-checkout-cone-mode: false
       - name: List
         run: ls
       # - name: Delete page.tsx
