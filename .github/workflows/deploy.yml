@@ -10,11 +10,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Delete page.tsx
-        run: rm src/app/fuga/page.tsx
-      - name: Verify file deletion
-        run: ls src/app/fuga
+      # - uses: actions/checkout@v4
+      # - name: Delete page.tsx
+      #   run: rm src/app/fuga/page.tsx
       - uses: amondnet/vercel-action@v25
         with:
           vercel-version: 33
