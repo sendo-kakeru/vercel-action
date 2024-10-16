@@ -10,5 +10,5 @@ jobs:
   deploy:
     uses: ./.github/workflows/template.yml
     with:
-      site: true
+      site: false
     secrets: inherit
