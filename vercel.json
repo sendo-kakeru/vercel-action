@@ -1,11 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/job_search",
-      "destination": "/job_search",
-      "permanent": true
-    },
-    {
       "source": "/job_search/",
       "destination": "/job_search",
       "permanent": true
