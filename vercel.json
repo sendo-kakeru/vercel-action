@@ -5,6 +5,12 @@
   },
   "redirects": [
     {
+      "source": "/pref/:id",
+      "has": [],
+      "destination": "/search?prefectures=:id",
+      "permanent": true
+    },
+    {
       "source": "/hoge",
       "destination": "/fuga",
       "permanent": true
