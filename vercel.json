@@ -1,18 +1,2858 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "git": {
-    "deploymentEnabled": false
-  },
   "redirects": [
     {
-      "source": "/pref/:id",
-      "has": [],
-      "destination": "/search?prefectures=:id",
+      "source": "検索条件",
+      "destination": "リダイレクト先URL",
       "permanent": true
     },
     {
-      "source": "/hoge",
-      "destination": "/fuga",
+      "source": "/job_search",
+      "destination": "/job_search",
+      "permanent": true
+    },
+    {
+      "source": "/job_search/",
+      "destination": "/job_search",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/1",
+      "destination": "/search?occupations=1&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/2",
+      "destination": "/search?occupations=2&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/3",
+      "destination": "/search?occupations=3&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/4",
+      "destination": "/search?occupations=4&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/5",
+      "destination": "/search?occupations=5&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/6",
+      "destination": "/search?occupations=6&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/7",
+      "destination": "/search?occupations=7&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/8",
+      "destination": "/search?occupations=8&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/9",
+      "destination": "/search?occupations=9&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/job_type/11",
+      "destination": "/search?occupations=11&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/1",
+      "destination": "/search?licenses=1&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/10",
+      "destination": "/search?licenses=10&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/11",
+      "destination": "/search?licenses=11&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/13",
+      "destination": "/search?licenses=13&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/15",
+      "destination": "/search?licenses=15&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/2",
+      "destination": "/search?licenses=2&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/3",
+      "destination": "/search?licenses=3&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/4",
+      "destination": "/search?licenses=4&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/5",
+      "destination": "/search?licenses=5&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/7",
+      "destination": "/search?licenses=7&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/8",
+      "destination": "/search?licenses=8&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/9",
+      "destination": "/search?licenses=9&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/license/99",
+      "destination": "/search?licenses=99&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/01",
+      "destination": "/search?prefectures=01&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/03",
+      "destination": "/search?prefectures=03&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/04",
+      "destination": "/search?prefectures=04&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/05",
+      "destination": "/search?prefectures=05&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/06",
+      "destination": "/search?prefectures=06&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/07",
+      "destination": "/search?prefectures=07&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/09",
+      "destination": "/search?prefectures=09&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/10",
+      "destination": "/search?prefectures=10&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/11",
+      "destination": "/search?prefectures=11&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/12",
+      "destination": "/search?prefectures=12&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/13",
+      "destination": "/search?prefectures=13&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/14",
+      "destination": "/search?prefectures=14&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/15",
+      "destination": "/search?prefectures=15&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/17",
+      "destination": "/search?prefectures=17&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/18",
+      "destination": "/search?prefectures=18&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/22",
+      "destination": "/search?prefectures=22&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/23",
+      "destination": "/search?prefectures=23&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/26",
+      "destination": "/search?prefectures=26&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/27",
+      "destination": "/search?prefectures=27&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/28",
+      "destination": "/search?prefectures=28&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/29",
+      "destination": "/search?prefectures=29&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/33",
+      "destination": "/search?prefectures=33&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/34",
+      "destination": "/search?prefectures=34&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/40",
+      "destination": "/search?prefectures=40&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/43",
+      "destination": "/search?prefectures=43&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/pref/48",
+      "destination": "/search?prefectures=48&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/1",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/2",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/3",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/4",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/4",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/4",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/service_type/4",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/work_type/1",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/work_type/2",
+      "destination": "/search?page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=23",
+      "destination": "/search?prefectures=23&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=33",
+      "destination": "/search?prefectures=33&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?job_type=8",
+      "destination": "/search?occupations=8&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01",
+      "destination": "/search?prefectures=01&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=15",
+      "destination": "/search?prefectures=15&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=43",
+      "destination": "/search?prefectures=43&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14",
+      "destination": "/search?prefectures=14&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13",
+      "destination": "/search?prefectures=13&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=02",
+      "destination": "/search?prefectures=02&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=34",
+      "destination": "/search?prefectures=34&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=40",
+      "destination": "/search?prefectures=40&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=47",
+      "destination": "/search?prefectures=47&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?job_type=6",
+      "destination": "/search?occupations=6&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?job_type=7",
+      "destination": "/search?occupations=7&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01204",
+      "destination": "/search?prefectures=01&cities=01204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13102",
+      "destination": "/search?prefectures=13&cities=13102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01205",
+      "destination": "/search?prefectures=01&cities=01205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=11&city=11210",
+      "destination": "/search?prefectures=11&cities=11210&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=23&city=23112",
+      "destination": "/search?prefectures=23&cities=23112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27107",
+      "destination": "/search?prefectures=27&cities=27107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01206",
+      "destination": "/search?prefectures=01&cities=01206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=04&city=04203",
+      "destination": "/search?prefectures=04&cities=04203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13121",
+      "destination": "/search?prefectures=13&cities=13121&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01208",
+      "destination": "/search?prefectures=01&cities=01208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=06&city=06205",
+      "destination": "/search?prefectures=06&cities=06205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=09&city=09202",
+      "destination": "/search?prefectures=09&cities=09202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27205",
+      "destination": "/search?prefectures=27&cities=27205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=33&city=33101",
+      "destination": "/search?prefectures=33&cities=33101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=34&city=34207",
+      "destination": "/search?prefectures=34&cities=34207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01107",
+      "destination": "/search?prefectures=01&cities=01107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=09&city=09208",
+      "destination": "/search?prefectures=09&cities=09208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=11&city=11240",
+      "destination": "/search?prefectures=11&cities=11240&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13105",
+      "destination": "/search?prefectures=13&cities=13105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13117",
+      "destination": "/search?prefectures=13&cities=13117&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14201",
+      "destination": "/search?prefectures=14&cities=14201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27116",
+      "destination": "/search?prefectures=27&cities=27116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=43&city=43105",
+      "destination": "/search?prefectures=43&cities=43105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01101",
+      "destination": "/search?prefectures=01&cities=01101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01235",
+      "destination": "/search?prefectures=01&cities=01235&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01643",
+      "destination": "/search?prefectures=01&cities=01643&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=09&city=09201",
+      "destination": "/search?prefectures=09&cities=09201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=11&city=11201",
+      "destination": "/search?prefectures=11&cities=11201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=12&city=12227",
+      "destination": "/search?prefectures=12&cities=12227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13110",
+      "destination": "/search?prefectures=13&cities=13110&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14207",
+      "destination": "/search?prefectures=14&cities=14207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14215",
+      "destination": "/search?prefectures=14&cities=14215&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=15&city=15307",
+      "destination": "/search?prefectures=15&cities=15307&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=26&city=26111",
+      "destination": "/search?prefectures=26&cities=26111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27210",
+      "destination": "/search?prefectures=27&cities=27210&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=28&city=28108",
+      "destination": "/search?prefectures=28&cities=28108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=33&city=33202",
+      "destination": "/search?prefectures=33&cities=33202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?city=13218&pref=48",
+      "destination": "/search?prefectures=48&cities=13218&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?city=26208&pref=26",
+      "destination": "/search?prefectures=26&cities=26208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01108",
+      "destination": "/search?prefectures=01&cities=01108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=01&city=01226",
+      "destination": "/search?prefectures=01&cities=01226&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=03&city=03203",
+      "destination": "/search?prefectures=03&cities=03203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=07&city=07205",
+      "destination": "/search?prefectures=07&cities=07205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=11&city=11103",
+      "destination": "/search?prefectures=11&cities=11103&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=11&city=11214",
+      "destination": "/search?prefectures=11&cities=11214&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=12&city=12103",
+      "destination": "/search?prefectures=12&cities=12103&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=12&city=12208",
+      "destination": "/search?prefectures=12&cities=12208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13106",
+      "destination": "/search?prefectures=13&cities=13106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13113",
+      "destination": "/search?prefectures=13&cities=13113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13119",
+      "destination": "/search?prefectures=13&cities=13119&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13120",
+      "destination": "/search?prefectures=13&cities=13120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&job_type=3",
+      "destination": "/search?prefectures=13&occupations=3&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14136",
+      "destination": "/search?prefectures=14&cities=14136&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14137",
+      "destination": "/search?prefectures=14&cities=14137&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14204",
+      "destination": "/search?prefectures=14&cities=14204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=14&city=14205",
+      "destination": "/search?prefectures=14&cities=14205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=15&city=15206",
+      "destination": "/search?prefectures=15&cities=15206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=23&city=23101",
+      "destination": "/search?prefectures=23&cities=23101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=23&city=23114",
+      "destination": "/search?prefectures=23&cities=23114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27204",
+      "destination": "/search?prefectures=27&cities=27204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=27&city=27211",
+      "destination": "/search?prefectures=27&cities=27211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=28&city=28102",
+      "destination": "/search?prefectures=28&cities=28102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=28&city=28106",
+      "destination": "/search?prefectures=28&cities=28106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13206&pref=48",
+      "destination": "/search?prefectures=48&cities=13206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13120&pref=13",
+      "destination": "/search?prefectures=13&cities=13120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13112&pref=13",
+      "destination": "/search?prefectures=13&cities=13112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14134&pref=14",
+      "destination": "/search?prefectures=14&cities=14134&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01101&pref=01",
+      "destination": "/search?prefectures=01&cities=01101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13227&pref=48",
+      "destination": "/search?prefectures=48&cities=13227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14216&pref=14",
+      "destination": "/search?prefectures=14&cities=14216&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=8",
+      "destination": "/search?merits=8&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28108&pref=28",
+      "destination": "/search?prefectures=28&cities=28108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13119&pref=13",
+      "destination": "/search?prefectures=13&cities=13119&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13201&pref=48",
+      "destination": "/search?prefectures=48&cities=13201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11104&pref=11",
+      "destination": "/search?prefectures=11&cities=11104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11208&pref=11",
+      "destination": "/search?prefectures=11&cities=11208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13121&pref=13",
+      "destination": "/search?prefectures=13&cities=13121&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13107&pref=13",
+      "destination": "/search?prefectures=13&cities=13107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14110&pref=14",
+      "destination": "/search?prefectures=14&cities=14110&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14213&pref=14",
+      "destination": "/search?prefectures=14&cities=14213&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01202&pref=01",
+      "destination": "/search?prefectures=01&cities=01202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28204&pref=28",
+      "destination": "/search?prefectures=28&cities=28204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13122&pref=13",
+      "destination": "/search?prefectures=13&cities=13122&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27203&pref=27",
+      "destination": "/search?prefectures=27&cities=27203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14205&pref=14",
+      "destination": "/search?prefectures=14&cities=14205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14206&pref=14",
+      "destination": "/search?prefectures=14&cities=14206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28102&pref=28",
+      "destination": "/search?prefectures=28&cities=28102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13209&pref=48",
+      "destination": "/search?prefectures=48&cities=13209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27107&pref=27",
+      "destination": "/search?prefectures=27&cities=27107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13115&pref=13",
+      "destination": "/search?prefectures=13&cities=13115&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13117&pref=13",
+      "destination": "/search?prefectures=13&cities=13117&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=1",
+      "destination": "/search?merits=1&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13111&pref=13",
+      "destination": "/search?prefectures=13&cities=13111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14136&pref=14",
+      "destination": "/search?prefectures=14&cities=14136&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13204&pref=48",
+      "destination": "/search?prefectures=48&cities=13204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26108&pref=26",
+      "destination": "/search?prefectures=26&cities=26108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=04105&pref=04",
+      "destination": "/search?prefectures=04&cities=04105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14204&pref=14",
+      "destination": "/search?prefectures=14&cities=14204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14153&pref=14",
+      "destination": "/search?prefectures=14&cities=14153&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11222&pref=11",
+      "destination": "/search?prefectures=11&cities=11222&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12101&pref=12",
+      "destination": "/search?prefectures=12&cities=12101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14152&pref=14",
+      "destination": "/search?prefectures=14&cities=14152&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=4",
+      "destination": "/search?merits=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11203&pref=11",
+      "destination": "/search?prefectures=11&cities=11203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14137&pref=14",
+      "destination": "/search?prefectures=14&cities=14137&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14116&pref=14",
+      "destination": "/search?prefectures=14&cities=14116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27211&pref=27",
+      "destination": "/search?prefectures=27&cities=27211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13219&pref=48",
+      "destination": "/search?prefectures=48&cities=13219&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=14",
+      "destination": "/search?prefectures=14&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01104&pref=01",
+      "destination": "/search?prefectures=01&cities=01104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13123&pref=13",
+      "destination": "/search?prefectures=13&cities=13123&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13220&pref=48",
+      "destination": "/search?prefectures=48&cities=13220&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=34207&pref=34",
+      "destination": "/search?prefectures=34&cities=34207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14132&pref=14",
+      "destination": "/search?prefectures=14&cities=14132&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28202&pref=28",
+      "destination": "/search?prefectures=28&cities=28202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11227&pref=11",
+      "destination": "/search?prefectures=11&cities=11227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14135&pref=14",
+      "destination": "/search?prefectures=14&cities=14135&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13108&pref=13",
+      "destination": "/search?prefectures=13&cities=13108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27141&pref=27",
+      "destination": "/search?prefectures=27&cities=27141&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=34101&pref=34",
+      "destination": "/search?prefectures=34&cities=34101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13202&pref=48",
+      "destination": "/search?prefectures=48&cities=13202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14301&pref=14",
+      "destination": "/search?prefectures=14&cities=14301&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12207&pref=12",
+      "destination": "/search?prefectures=12&cities=12207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13208&pref=48",
+      "destination": "/search?prefectures=48&cities=13208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13229&pref=48",
+      "destination": "/search?prefectures=48&cities=13229&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27207&pref=27",
+      "destination": "/search?prefectures=27&cities=27207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01107&pref=01",
+      "destination": "/search?prefectures=01&cities=01107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12204&pref=12",
+      "destination": "/search?prefectures=12&cities=12204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13213&pref=48",
+      "destination": "/search?prefectures=48&cities=13213&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14111&pref=14",
+      "destination": "/search?prefectures=14&cities=14111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14214&pref=14",
+      "destination": "/search?prefectures=14&cities=14214&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23105&pref=23",
+      "destination": "/search?prefectures=23&cities=23105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11221&pref=11",
+      "destination": "/search?prefectures=11&cities=11221&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23114&pref=23",
+      "destination": "/search?prefectures=23&cities=23114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27120&pref=27",
+      "destination": "/search?prefectures=27&cities=27120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27227&pref=27",
+      "destination": "/search?prefectures=27&cities=27227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13109&pref=13",
+      "destination": "/search?prefectures=13&cities=13109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23104&pref=23",
+      "destination": "/search?prefectures=23&cities=23104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14201&pref=14",
+      "destination": "/search?prefectures=14&cities=14201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27230&pref=27",
+      "destination": "/search?prefectures=27&cities=27230&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12217&pref=12",
+      "destination": "/search?prefectures=12&cities=12217&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13116&pref=13",
+      "destination": "/search?prefectures=13&cities=13116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23116&pref=23",
+      "destination": "/search?prefectures=23&cities=23116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26109&pref=26",
+      "destination": "/search?prefectures=26&cities=26109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11108&pref=11",
+      "destination": "/search?prefectures=11&cities=11108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23113&pref=23",
+      "destination": "/search?prefectures=23&cities=23113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=33101&pref=33",
+      "destination": "/search?prefectures=33&cities=33101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11239&pref=11",
+      "destination": "/search?prefectures=11&cities=11239&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14109&pref=14",
+      "destination": "/search?prefectures=14&cities=14109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14113&pref=14",
+      "destination": "/search?prefectures=14&cities=14113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14131&pref=14",
+      "destination": "/search?prefectures=14&cities=14131&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27106&pref=27",
+      "destination": "/search?prefectures=27&cities=27106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27114&pref=27",
+      "destination": "/search?prefectures=27&cities=27114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27215&pref=27",
+      "destination": "/search?prefectures=27&cities=27215&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11224&pref=11",
+      "destination": "/search?prefectures=11&cities=11224&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28111&pref=28",
+      "destination": "/search?prefectures=28&cities=28111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11245&pref=11",
+      "destination": "/search?prefectures=11&cities=11245&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26103&pref=26",
+      "destination": "/search?prefectures=26&cities=26103&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27122&pref=27",
+      "destination": "/search?prefectures=27&cities=27122&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14301&pref=14",
+      "destination": "/search?prefectures=14&cities=14301&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01108&pref=01",
+      "destination": "/search?prefectures=01&cities=01108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14118&pref=14",
+      "destination": "/search?prefectures=14&cities=14118&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=34102&pref=34",
+      "destination": "/search?prefectures=34&cities=34102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=6",
+      "destination": "/search?merits=6&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=04102&pref=04",
+      "destination": "/search?prefectures=04&cities=04102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11103&pref=11",
+      "destination": "/search?prefectures=11&cities=11103&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11106&pref=11",
+      "destination": "/search?prefectures=11&cities=11106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14102&pref=14",
+      "destination": "/search?prefectures=14&cities=14102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14218&pref=14",
+      "destination": "/search?prefectures=14&cities=14218&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23103&pref=23",
+      "destination": "/search?prefectures=23&cities=23103&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23106&pref=23",
+      "destination": "/search?prefectures=23&cities=23106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23108&pref=23",
+      "destination": "/search?prefectures=23&cities=23108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23112&pref=23",
+      "destination": "/search?prefectures=23&cities=23112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12220&pref=12",
+      "destination": "/search?prefectures=12&cities=12220&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14151&pref=14",
+      "destination": "/search?prefectures=14&cities=14151&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14215&pref=14",
+      "destination": "/search?prefectures=14&cities=14215&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23109&pref=23",
+      "destination": "/search?prefectures=23&cities=23109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27204&pref=27",
+      "destination": "/search?prefectures=27&cities=27204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28105&pref=28",
+      "destination": "/search?prefectures=28&cities=28105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13104&pref=13",
+      "destination": "/search?prefectures=13&cities=13104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13207&pref=48",
+      "destination": "/search?prefectures=48&cities=13207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13225&pref=48",
+      "destination": "/search?prefectures=48&cities=13225&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=22101&pref=22",
+      "destination": "/search?prefectures=22&cities=22101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27202&pref=27",
+      "destination": "/search?prefectures=27&cities=27202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27205&pref=27",
+      "destination": "/search?prefectures=27&cities=27205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=13",
+      "destination": "/search?prefectures=13&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11215&pref=11",
+      "destination": "/search?prefectures=11&cities=11215&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11228&pref=11",
+      "destination": "/search?prefectures=11&cities=11228&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12221&pref=12",
+      "destination": "/search?prefectures=12&cities=12221&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13106&pref=13",
+      "destination": "/search?prefectures=13&cities=13106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=22132&pref=22",
+      "destination": "/search?prefectures=22&cities=22132&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27124&pref=27",
+      "destination": "/search?prefectures=27&cities=27124&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27218&pref=27",
+      "destination": "/search?prefectures=27&cities=27218&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=7",
+      "destination": "/search?merits=7&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13108",
+      "destination": "/search?prefectures=13&cities=13108&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=23",
+      "destination": "/search?prefectures=23&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11225&pref=11",
+      "destination": "/search?prefectures=11&cities=11225&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11234&pref=11",
+      "destination": "/search?prefectures=11&cities=11234&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13222&pref=48",
+      "destination": "/search?prefectures=48&cities=13222&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14203&pref=14",
+      "destination": "/search?prefectures=14&cities=14203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14207&pref=14",
+      "destination": "/search?prefectures=14&cities=14207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=22207&pref=22",
+      "destination": "/search?prefectures=22&cities=22207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23342&pref=23",
+      "destination": "/search?prefectures=23&cities=23342&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27118&pref=27",
+      "destination": "/search?prefectures=27&cities=27118&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27119&pref=27",
+      "destination": "/search?prefectures=27&cities=27119&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27121&pref=27",
+      "destination": "/search?prefectures=27&cities=27121&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27210&pref=27",
+      "destination": "/search?prefectures=27&cities=27210&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=33102&pref=33",
+      "destination": "/search?prefectures=33&cities=33102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=27",
+      "destination": "/search?prefectures=27&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12104&pref=12",
+      "destination": "/search?prefectures=12&cities=12104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14108&pref=14",
+      "destination": "/search?prefectures=14&cities=14108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23110&pref=23",
+      "destination": "/search?prefectures=23&cities=23110&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26104&pref=26",
+      "destination": "/search?prefectures=26&cities=26104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26111&pref=26",
+      "destination": "/search?prefectures=26&cities=26111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27102&pref=27",
+      "destination": "/search?prefectures=27&cities=27102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28106&pref=28",
+      "destination": "/search?prefectures=28&cities=28106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28217&pref=28",
+      "destination": "/search?prefectures=28&cities=28217&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13122&pref=13",
+      "destination": "/search?prefectures=13&cities=13122&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&merit=10",
+      "destination": "/search?merits=10&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=33",
+      "destination": "/search?prefectures=33&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=05201&pref=05",
+      "destination": "/search?prefectures=05&cities=05201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11101&pref=11",
+      "destination": "/search?prefectures=11&cities=11101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13215&pref=48",
+      "destination": "/search?prefectures=48&cities=13215&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14212&pref=14",
+      "destination": "/search?prefectures=14&cities=14212&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26208&pref=26",
+      "destination": "/search?prefectures=26&cities=26208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27144&pref=27",
+      "destination": "/search?prefectures=27&cities=27144&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27209&pref=27",
+      "destination": "/search?prefectures=27&cities=27209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28207&pref=28",
+      "destination": "/search?prefectures=28&cities=28207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=33104&pref=33",
+      "destination": "/search?prefectures=33&cities=33104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14216&pref=14",
+      "destination": "/search?prefectures=14&cities=14216&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=28105&pref=28",
+      "destination": "/search?prefectures=28&cities=28105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13112&pref=13",
+      "destination": "/search?prefectures=13&cities=13112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13206&pref=48",
+      "destination": "/search?prefectures=48&cities=13206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=06&city=06201",
+      "destination": "/search?prefectures=06&cities=06201&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&service_type=4",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=12",
+      "destination": "/search?prefectures=12&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=33",
+      "destination": "/search?prefectures=33&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11105&pref=11",
+      "destination": "/search?prefectures=11&cities=11105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11209&pref=11",
+      "destination": "/search?prefectures=11&cities=11209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12203&pref=12",
+      "destination": "/search?prefectures=12&cities=12203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14107&pref=14",
+      "destination": "/search?prefectures=14&cities=14107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14210&pref=14",
+      "destination": "/search?prefectures=14&cities=14210&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27111&pref=27",
+      "destination": "/search?prefectures=27&cities=27111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27113&pref=27",
+      "destination": "/search?prefectures=27&cities=27113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27143&pref=27",
+      "destination": "/search?prefectures=27&cities=27143&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28101&pref=28",
+      "destination": "/search?prefectures=28&cities=28101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=28214&pref=28",
+      "destination": "/search?prefectures=28&cities=28214&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27114&pref=27",
+      "destination": "/search?prefectures=27&cities=27114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=28108&pref=28",
+      "destination": "/search?prefectures=28&cities=28108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=28204&pref=28",
+      "destination": "/search?prefectures=28&cities=28204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=33101&pref=33",
+      "destination": "/search?prefectures=33&cities=33101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13225&pref=48",
+      "destination": "/search?prefectures=48&cities=13225&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=6",
+      "destination": "/search?occupations=6&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11101",
+      "destination": "/search?prefectures=11&cities=11101&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13204",
+      "destination": "/search?prefectures=13&cities=13204&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=48&city=13206",
+      "destination": "/search?prefectures=48&cities=13206&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=&pref=04",
+      "destination": "/search?prefectures=04&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=&pref=28",
+      "destination": "/search?prefectures=28&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=04",
+      "destination": "/search?prefectures=04&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=23",
+      "destination": "/search?prefectures=23&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=29",
+      "destination": "/search?prefectures=29&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=13",
+      "destination": "/search?prefectures=13&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=27",
+      "destination": "/search?prefectures=27&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=28",
+      "destination": "/search?prefectures=28&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&amp;city=&amp;merit=8",
+      "destination": "/search?merits=8&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01206&pref=01",
+      "destination": "/search?prefectures=01&cities=01206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=03211&pref=03",
+      "destination": "/search?prefectures=03&cities=03211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12211&pref=12",
+      "destination": "/search?prefectures=12&cities=12211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12216&pref=12",
+      "destination": "/search?prefectures=12&cities=12216&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13211&pref=48",
+      "destination": "/search?prefectures=48&cities=13211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14112&pref=14",
+      "destination": "/search?prefectures=14&cities=14112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14341&pref=14",
+      "destination": "/search?prefectures=14&cities=14341&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23101&pref=23",
+      "destination": "/search?prefectures=23&cities=23101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=23107&pref=23",
+      "destination": "/search?prefectures=23&cities=23107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=26107&pref=26",
+      "destination": "/search?prefectures=26&cities=26107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27116&pref=27",
+      "destination": "/search?prefectures=27&cities=27116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27220&pref=27",
+      "destination": "/search?prefectures=27&cities=27220&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=33202&pref=33",
+      "destination": "/search?prefectures=33&cities=33202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=03201&pref=03",
+      "destination": "/search?prefectures=03&cities=03201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13106&pref=13",
+      "destination": "/search?prefectures=13&cities=13106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14110&pref=14",
+      "destination": "/search?prefectures=14&cities=14110&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27223&pref=27",
+      "destination": "/search?prefectures=27&cities=27223&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14205&pref=14",
+      "destination": "/search?prefectures=14&cities=14205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14213&pref=14",
+      "destination": "/search?prefectures=14&cities=14213&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=26107&pref=26",
+      "destination": "/search?prefectures=26&cities=26107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=27204&pref=27",
+      "destination": "/search?prefectures=27&cities=27204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=",
+      "destination": "/search?prefectures=13&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=48&city=",
+      "destination": "/search?prefectures=48&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=2",
+      "destination": "/search?occupations=2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=3",
+      "destination": "/search?occupations=3&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=4",
+      "destination": "/search?occupations=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=100&city=&job_type=2",
+      "destination": "/search?occupations=2&page=1&limit=100",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=15",
+      "destination": "/search?occupations=15&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=2",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01101",
+      "destination": "/search?prefectures=01&cities=01101&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01205",
+      "destination": "/search?prefectures=01&cities=01205&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01643",
+      "destination": "/search?prefectures=01&cities=01643&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11110",
+      "destination": "/search?prefectures=11&cities=11110&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11214",
+      "destination": "/search?prefectures=11&cities=11214&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11227",
+      "destination": "/search?prefectures=11&cities=11227&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12217",
+      "destination": "/search?prefectures=12&cities=12217&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13104",
+      "destination": "/search?prefectures=13&cities=13104&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13122",
+      "destination": "/search?prefectures=13&cities=13122&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14132",
+      "destination": "/search?prefectures=14&cities=14132&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=26&city=26108",
+      "destination": "/search?prefectures=26&cities=26108&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=27&city=27205",
+      "destination": "/search?prefectures=27&cities=27205&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=28&city=28108",
+      "destination": "/search?prefectures=28&cities=28108&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?pref=13&city=13120&l=10",
+      "destination": "/search?prefectures=13&cities=13120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&service_type=6",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=14",
+      "destination": "/search?prefectures=14&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=26",
+      "destination": "/search?prefectures=26&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=&pref=28",
+      "destination": "/search?prefectures=28&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=12",
+      "destination": "/search?prefectures=12&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=&pref=26",
+      "destination": "/search?prefectures=26&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01105&pref=01",
+      "destination": "/search?prefectures=01&cities=01105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=06201&pref=06",
+      "destination": "/search?prefectures=06&cities=06201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=11241&pref=11",
+      "destination": "/search?prefectures=11&cities=11241&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13218&pref=48",
+      "destination": "/search?prefectures=48&cities=13218&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14117&pref=14",
+      "destination": "/search?prefectures=14&cities=14117&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14208&pref=14",
+      "destination": "/search?prefectures=14&cities=14208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=15206&pref=15",
+      "destination": "/search?prefectures=15&cities=15206&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=17201&pref=17",
+      "destination": "/search?prefectures=17&cities=17201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=22131&pref=22",
+      "destination": "/search?prefectures=22&cities=22131&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27109&pref=27",
+      "destination": "/search?prefectures=27&cities=27109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27123&pref=27",
+      "destination": "/search?prefectures=27&cities=27123&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27125&pref=27",
+      "destination": "/search?prefectures=27&cities=27125&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=01101&pref=01",
+      "destination": "/search?prefectures=01&cities=01101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=01105&pref=01",
+      "destination": "/search?prefectures=01&cities=01105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=01205&pref=01",
+      "destination": "/search?prefectures=01&cities=01205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=04209&pref=04",
+      "destination": "/search?prefectures=04&cities=04209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=06201&pref=06",
+      "destination": "/search?prefectures=06&cities=06201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=11221&pref=11",
+      "destination": "/search?prefectures=11&cities=11221&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=11228&pref=11",
+      "destination": "/search?prefectures=11&cities=11228&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=12227&pref=12",
+      "destination": "/search?prefectures=12&cities=12227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13104&pref=13",
+      "destination": "/search?prefectures=13&cities=13104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13107&pref=13",
+      "destination": "/search?prefectures=13&cities=13107&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13108&pref=13",
+      "destination": "/search?prefectures=13&cities=13108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13109&pref=13",
+      "destination": "/search?prefectures=13&cities=13109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13112&pref=13",
+      "destination": "/search?prefectures=13&cities=13112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13113&pref=13",
+      "destination": "/search?prefectures=13&cities=13113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13114&pref=13",
+      "destination": "/search?prefectures=13&cities=13114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13119&pref=13",
+      "destination": "/search?prefectures=13&cities=13119&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13121&pref=13",
+      "destination": "/search?prefectures=13&cities=13121&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13202&pref=48",
+      "destination": "/search?prefectures=48&cities=13202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13204&pref=48",
+      "destination": "/search?prefectures=48&cities=13204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14114&pref=14",
+      "destination": "/search?prefectures=14&cities=14114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14115&pref=14",
+      "destination": "/search?prefectures=14&cities=14115&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14116&pref=14",
+      "destination": "/search?prefectures=14&cities=14116&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14136&pref=14",
+      "destination": "/search?prefectures=14&cities=14136&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14201&pref=14",
+      "destination": "/search?prefectures=14&cities=14201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14205&pref=14",
+      "destination": "/search?prefectures=14&cities=14205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=23105&pref=23",
+      "destination": "/search?prefectures=23&cities=23105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=23109&pref=23",
+      "destination": "/search?prefectures=23&cities=23109&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=23112&pref=23",
+      "destination": "/search?prefectures=23&cities=23112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=26106&pref=26",
+      "destination": "/search?prefectures=26&cities=26106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=26208&pref=26",
+      "destination": "/search?prefectures=26&cities=26208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27120&pref=27",
+      "destination": "/search?prefectures=27&cities=27120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27122&pref=27",
+      "destination": "/search?prefectures=27&cities=27122&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27123&pref=27",
+      "destination": "/search?prefectures=27&cities=27123&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27207&pref=27",
+      "destination": "/search?prefectures=27&cities=27207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=27227&pref=27",
+      "destination": "/search?prefectures=27&cities=27227&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=34101&pref=34",
+      "destination": "/search?prefectures=34&cities=34101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=01108&pref=01",
+      "destination": "/search?prefectures=01&cities=01108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=06201&pref=06",
+      "destination": "/search?prefectures=06&cities=06201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=11225&pref=11",
+      "destination": "/search?prefectures=11&cities=11225&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=11228&pref=11",
+      "destination": "/search?prefectures=11&cities=11228&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=11245&pref=11",
+      "destination": "/search?prefectures=11&cities=11245&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=12101&pref=12",
+      "destination": "/search?prefectures=12&cities=12101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=12217&pref=12",
+      "destination": "/search?prefectures=12&cities=12217&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13104&pref=13",
+      "destination": "/search?prefectures=13&cities=13104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13115&pref=13",
+      "destination": "/search?prefectures=13&cities=13115&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13117&pref=13",
+      "destination": "/search?prefectures=13&cities=13117&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13120&pref=13",
+      "destination": "/search?prefectures=13&cities=13120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13203&pref=48",
+      "destination": "/search?prefectures=48&cities=13203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13209&pref=48",
+      "destination": "/search?prefectures=48&cities=13209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14134&pref=14",
+      "destination": "/search?prefectures=14&cities=14134&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=26208&pref=26",
+      "destination": "/search?prefectures=26&cities=26208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=27203&pref=27",
+      "destination": "/search?prefectures=27&cities=27203&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=28204&pref=28",
+      "destination": "/search?prefectures=28&cities=28204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=34101&pref=34",
+      "destination": "/search?prefectures=34&cities=34101&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&job_type=1%2C2",
+      "destination": "/search?occupations=1%2C2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=33&city=&work_type=1",
+      "destination": "/search?prefectures=33&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=&license=4",
+      "destination": "/search?prefectures=23&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14152&merit=1",
+      "destination": "/search?prefectures=14&cities=14152&merits=1&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=23113&merit=6",
+      "destination": "/search?prefectures=23&cities=23113&merits=6&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13117&work_type=1",
+      "destination": "/search?prefectures=13&cities=13117&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14110&work_type=2",
+      "destination": "/search?prefectures=14&cities=14110&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=&license=4",
+      "destination": "/search?prefectures=13&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=34&city=&work_type=2",
+      "destination": "/search?prefectures=34&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1&job_type=4",
+      "destination": "/search?occupations=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=07&city=&service_type=1",
+      "destination": "/search?prefectures=07&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12204&work_type=1",
+      "destination": "/search?prefectures=12&cities=12204&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13107&work_type=1",
+      "destination": "/search?prefectures=13&cities=13107&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14213&work_type=1",
+      "destination": "/search?prefectures=14&cities=14213&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1&service_type=4",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=34&city=&merit=1",
+      "destination": "/search?prefectures=34&merits=1&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=&license=4",
+      "destination": "/search?prefectures=11&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=&license=2",
+      "destination": "/search?prefectures=13&licenses=2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=27&city=&license=4",
+      "destination": "/search?prefectures=27&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=04&city=&job_type=2",
+      "destination": "/search?prefectures=04&occupations=2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=10&city=&job_type=3",
+      "destination": "/search?prefectures=10&occupations=3&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=&job_type=6",
+      "destination": "/search?prefectures=14&occupations=6&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=&job_type=3",
+      "destination": "/search?prefectures=23&occupations=3&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=&job_type=6",
+      "destination": "/search?prefectures=23&occupations=6&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=26&city=&job_type=2",
+      "destination": "/search?prefectures=26&occupations=2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=100&pref=48&city=&job_type=3",
+      "destination": "/search?prefectures=48&occupations=3&page=1&limit=100",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=4&merit=12",
+      "destination": "/search?occupations=4&merits=12&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=03&city=&work_type=1",
+      "destination": "/search?prefectures=03&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=04&city=&job_type=14",
+      "destination": "/search?prefectures=04&occupations=14&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=&work_type=1",
+      "destination": "/search?prefectures=11&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=&work_type=1",
+      "destination": "/search?prefectures=13&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=27&city=&work_type=1",
+      "destination": "/search?prefectures=27&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=28&city=&work_type=1",
+      "destination": "/search?prefectures=28&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=04&city=04105&merit=4",
+      "destination": "/search?prefectures=04&cities=04105&merits=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1&job_type=7",
+      "destination": "/search?occupations=7&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01109&license=2",
+      "destination": "/search?prefectures=01&cities=01109&licenses=2&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13115&license=4",
+      "destination": "/search?prefectures=13&cities=13115&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=&service_type=1",
+      "destination": "/search?prefectures=23&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=23&city=23108&license=4",
+      "destination": "/search?prefectures=23&cities=23108&licenses=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01101&work_type=1",
+      "destination": "/search?prefectures=01&cities=01101&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=01&city=01204&work_type=1",
+      "destination": "/search?prefectures=01&cities=01204&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=04&city=04105&work_type=1",
+      "destination": "/search?prefectures=04&cities=04105&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=06&city=06205&work_type=1",
+      "destination": "/search?prefectures=06&cities=06205&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11225&work_type=1",
+      "destination": "/search?prefectures=11&cities=11225&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11225&work_type=2",
+      "destination": "/search?prefectures=11&cities=11225&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11230&work_type=1",
+      "destination": "/search?prefectures=11&cities=11230&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12104&work_type=1",
+      "destination": "/search?prefectures=12&cities=12104&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12207&work_type=2",
+      "destination": "/search?prefectures=12&cities=12207&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12211&work_type=1",
+      "destination": "/search?prefectures=12&cities=12211&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13102&work_type=1",
+      "destination": "/search?prefectures=13&cities=13102&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13111&work_type=1",
+      "destination": "/search?prefectures=13&cities=13111&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13112&work_type=1",
+      "destination": "/search?prefectures=13&cities=13112&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13123&work_type=2",
+      "destination": "/search?prefectures=13&cities=13123&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14114&work_type=2",
+      "destination": "/search?prefectures=14&cities=14114&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14115&work_type=2",
+      "destination": "/search?prefectures=14&cities=14115&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14131&work_type=1",
+      "destination": "/search?prefectures=14&cities=14131&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=14&city=14132&work_type=1",
+      "destination": "/search?prefectures=14&cities=14132&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=27&city=27215&work_type=2",
+      "destination": "/search?prefectures=27&cities=27215&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=28&city=28204&work_type=1",
+      "destination": "/search?prefectures=28&cities=28204&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=48&city=13227&work_type=2",
+      "destination": "/search?prefectures=48&cities=13227&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&service_type=1&job_type=4",
+      "destination": "/search?occupations=4&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1&service_type=2",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&work_type=1&service_type=3",
+      "destination": "/search?page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=13&city=13112&service_type=5",
+      "destination": "/search?prefectures=13&cities=13112&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12207&yclid=YSS.1001057814.EAIaIQobChMIrMfzwLXm9AIVmNhMAh2bXw7sEAEYAiAAEgIZEvD_BwE",
+      "destination": "/search?prefectures=12&cities=12207&page=1&limit=20",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13109%2C13122&pref=13",
+      "destination": "/search?prefectures=13&cities=13109%2C13122&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14112%2C14114&pref=14",
+      "destination": "/search?prefectures=14&cities=14112%2C14114&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=14135&pref=14",
+      "destination": "/search?prefectures=14&cities=14135&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=23101%2C23105&pref=23",
+      "destination": "/search?prefectures=23&cities=23101%2C23105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=01102%2C01105&pref=01",
+      "destination": "/search?prefectures=01&cities=01102%2C01105&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&city=&job_type=5%2C11",
+      "destination": "/search?occupations=5%2C11&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14152%2C14153&pref=14",
+      "destination": "/search?prefectures=14&cities=14152%2C14153&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14205%2C14207&pref=14",
+      "destination": "/search?prefectures=14&cities=14205%2C14207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=11&city=11203%2C11221",
+      "destination": "/search?prefectures=11&cities=11203%2C11221&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=12&city=12101%2C12104",
+      "destination": "/search?prefectures=12&cities=12101%2C12104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=28&city=28105%2C28106",
+      "destination": "/search?prefectures=28&cities=28105%2C28106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?l=20&pref=48&city=13202%2C13211",
+      "destination": "/search?prefectures=48&cities=13202%2C13211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=01202&pref=01",
+      "destination": "/search?prefectures=01&cities=01202&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=04102&pref=04",
+      "destination": "/search?prefectures=04&cities=04102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=12104&pref=12",
+      "destination": "/search?prefectures=12&cities=12104&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=13115&pref=13",
+      "destination": "/search?prefectures=13&cities=13115&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=13209&pref=48",
+      "destination": "/search?prefectures=48&cities=13209&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=14134&pref=14",
+      "destination": "/search?prefectures=14&cities=14134&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=14137&pref=14",
+      "destination": "/search?prefectures=14&cities=14137&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=27111&pref=27",
+      "destination": "/search?prefectures=27&cities=27111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1%2C2&city=27118&pref=27",
+      "destination": "/search?prefectures=27&cities=27118&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=04105%2C04423&pref=04",
+      "destination": "/search?prefectures=04&cities=04105%2C04423&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=09201%2C09211&pref=09",
+      "destination": "/search?prefectures=09&cities=09201%2C09211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=12203%2C12204&pref=12",
+      "destination": "/search?prefectures=12&cities=12203%2C12204&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13108%2C13113&pref=13",
+      "destination": "/search?prefectures=13&cities=13108%2C13113&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13109%2C13111&pref=13",
+      "destination": "/search?prefectures=13&cities=13109%2C13111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=13110%2C13112&pref=13",
+      "destination": "/search?prefectures=13&cities=13110%2C13112&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14108%2C14201&pref=14",
+      "destination": "/search?prefectures=14&cities=14108%2C14201&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=14205%2C14207&pref=14",
+      "destination": "/search?prefectures=14&cities=14205%2C14207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27143%2C27145&pref=27",
+      "destination": "/search?prefectures=27&cities=27143%2C27145&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=27207%2C27211&pref=27",
+      "destination": "/search?prefectures=27&cities=27207%2C27211&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=&city=40135%2C40136&pref=40",
+      "destination": "/search?prefectures=40&cities=40135%2C40136&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13103%2C13106&pref=13",
+      "destination": "/search?prefectures=13&cities=13103%2C13106&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13106%2C13121&pref=13",
+      "destination": "/search?prefectures=13&cities=13106%2C13121&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13116%2C13119&pref=13",
+      "destination": "/search?prefectures=13&cities=13116%2C13119&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=13206%2C13208&pref=48",
+      "destination": "/search?prefectures=48&cities=13206%2C13208&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14109%2C14118&pref=14",
+      "destination": "/search?prefectures=14&cities=14109%2C14118&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14116%2C14205&pref=14",
+      "destination": "/search?prefectures=14&cities=14116%2C14205&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14118%2C14136&pref=14",
+      "destination": "/search?prefectures=14&cities=14118%2C14136&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=14205%2C14207&pref=14",
+      "destination": "/search?prefectures=14&cities=14205%2C14207&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=1&city=33101%2C33102&pref=33",
+      "destination": "/search?prefectures=33&cities=33101%2C33102&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=01207%2C01643&pref=01",
+      "destination": "/search?prefectures=01&cities=01207%2C01643&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13109%2C13111&pref=13",
+      "destination": "/search?prefectures=13&cities=13109%2C13111&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=13116%2C13120&pref=13",
+      "destination": "/search?prefectures=13&cities=13116%2C13120&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=14134%2C14135&pref=14",
+      "destination": "/search?prefectures=14&cities=14134%2C14135&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/search?work_type=2&city=23107%2C23108&pref=23",
+      "destination": "/search?prefectures=23&cities=23107%2C23108&page=1&limit=10",
+      "permanent": true
+    },
+    {
+      "source": "/about/improvement",
+      "destination": "/about/improvement/2023",
+      "permanent": true
+    },
+    {
+      "source": "/staff/caremanager/01",
+      "destination": "/staff/caremanager/facility",
+      "permanent": true
+    },
+    {
+      "source": "/staff/caremanager/02",
+      "destination": "/staff/caremanager/residence",
       "permanent": true
     }
   ]
