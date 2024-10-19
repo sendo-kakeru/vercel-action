@@ -17,12 +17,12 @@
     },
     {
       "source": "/service_type/:id",
-      "destination": "/search?page=:id&limit=10",
+      "destination": "/search?serviceTypes=:id&page=1&limit=10",
       "permanent": true
     },
     {
       "source": "/work_type/:id",
-      "destination": "/search?page=1&limit=10",
+      "destination": "/search?workTypes=:id&page=1&limit=10",
       "permanent": true
     },
     {
@@ -34,7 +34,7 @@
           "value": "(.*)"
         }
       ],
-      "destination": "/search?prefectures={23}&page=1&limit=10",
+      "destination": "/search?prefectures={pref}&page=1&limit=10",
       "permanent": true
     },
     {
