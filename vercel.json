@@ -34,7 +34,7 @@
           "value": "(.*)"
         }
       ],
-      "destination": "/search?prefectures=:pref&page=1&limit=10",
+      "destination": "/search?prefectures={23}&page=1&limit=10",
       "permanent": true
     },
     {
